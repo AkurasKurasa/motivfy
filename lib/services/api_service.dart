@@ -5,6 +5,10 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 class ChatService {
 
   static Future<String> sendMessage(String message) async {
+
+    final _apiUrl = "test";
+    final _apiKey ="test";
+
     final response = await http.post(
       Uri.parse(_apiUrl),
       headers: {
