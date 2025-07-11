@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:motivfy/pages/chat_page.dart';
-import 'package:motivfy/pages/launch_page.dart';
-import 'package:motivfy/pages/notification_page.dart';
-import 'package:motivfy/pages/pomodoro_page.dart';
+// import 'package:motivfy/pages/chat_page.dart';
+// import 'package:motivfy/pages/launch_page.dart';
+// import 'package:motivfy/pages/notification_page.dart';
+// import 'package:motivfy/pages/pomodoro_page.dart';
+import 'package:motivfy/features/launch/launch_page.dart';
+import 'package:motivfy/features/chat/chat_page.dart';
+import 'package:motivfy/features/notification/notification_page.dart';
+import 'package:motivfy/features/pomodoro/pomodoro_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
