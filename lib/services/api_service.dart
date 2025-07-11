@@ -1,33 +1,45 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class ChatService {
+  static const String _apiUrl = "https://openrouter.ai/api/v1/chat/completions";
+
+  // Make sure this is your valid OpenRouter API key
+  static const String _apiKey = "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";
 
   static Future<String> sendMessage(String message) async {
+    if (_apiKey.isEmpty) {
+      throw Exception('API key is missing.');
+    }
 
-    final _apiUrl = "test";
-    final _apiKey ="test";
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $_apiKey',
+      'HTTP-Referer': 'https://yourapp.com', // Replace with your domain or any URL
+      'X-Title': 'Motivfy Chat', // Optional but good practice
+    };
+
+    final body = jsonEncode({
+      "model": "deepseek/deepseek-r1:free", // ✅ model must be exactly this
+      "messages": [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": message}
+      ],
+      "temperature": 0.7
+    });
 
     final response = await http.post(
       Uri.parse(_apiUrl),
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer $_apiKey',
-      },
-      body: jsonEncode({
-        "model": "gpt-3.5-turbo",
-        "messages": [
-          {"role": "user", "content": message}
-        ],
-        "temperature": 0.7,
-      }),
+      headers: headers,
+      body: body,
     );
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
       return data['choices'][0]['message']['content'].trim();
     } else {
+      print('❌ ERROR: ${response.statusCode}');
+      print(response.body);
       throw Exception('Failed to get response: ${response.body}');
     }
   }
