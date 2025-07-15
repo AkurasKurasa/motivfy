@@ -1,0 +1,86 @@
+LIB FOLDER STRUCTURE
+====================
+
+lib/
+├── app_icons.dart
+├── DummyData.dart
+├── main.dart
+│
+├── DummyData/
+│   └── (empty folder)
+│
+├── Pages/
+│   ├── HomePage.dart
+│   ├── home_dash.dart
+│   ├── ManualTaskCreateContentPage.dart
+│   ├── ManualTaskCreatePage.dart
+│   ├── NoteFlowContentPage.dart
+│   ├── NoteFlowPage.dart
+│   ├── PomodoroPage.dart
+│   ├── ProductivityAssistantPage.dart
+│   ├── ProfilePage.dart
+│   ├── RecentlyDeletedNotesPage.dart
+│   ├── SettingsPage.dart
+│   ├── TaskCreationPage.dart
+│   ├── TasksArchivePage.dart
+│   └── TasksNotesPage.dart
+│
+├── Services/
+│   ├── logger_service.dart
+│   ├── note_flow_service.dart
+│   ├── note_service.dart
+│   ├── task_service.dart
+│   ├── userData.dart
+│   ├── userDataManager.dart
+│   └── UserData_README.md
+│
+└── UI_Components/
+    ├── task_form_helpers.dart
+    ├── ui_action_button.dart
+    ├── ui_Analytics_Weekly_Focus.dart
+    ├── ui_animated_filter_selector.dart
+    ├── ui_bullet_point.dart
+    ├── ui_Circular_Progress_Widget.dart
+    ├── ui_customTabselector.dart
+    ├── ui_custom_home_widget.dart
+    ├── ui_custom_home_widget_fixed.dart
+    ├── ui_Custom_Task_Progress_Bar.dart
+    ├── ui_date_button.dart
+    ├── ui_effect_AnimatedEntryWidget.dart
+    ├── ui_error_boundary.dart
+    ├── ui_floating_arrow.dart
+    ├── ui_format_option.dart
+    ├── ui_format_selector_with_indicator.dart
+    ├── ui_glassmorphic_button.dart
+    ├── ui_liquid_filter_selector.dart
+    ├── ui_navigation_menu.dart
+    ├── ui_saved_time_badge.dart
+    ├── ui_Slide_Menu_Button.dart
+    ├── ui_subtasks_list.dart
+    ├── ui_tab_selector.dart
+    ├── ui_task_detail_dialog.dart
+    ├── ui_task_form.dart
+    ├── ui_task_form_refactored.dart
+    ├── ui_task_item.dart
+    ├── ui_task_item_fixed.dart
+    ├── ui_task_list.dart
+    ├── ui_task_popup.dart
+    └── ui_view_all_button.dart
+
+SUMMARY
+=======
+Total Folders: 4 (including lib root)
+- lib/ (root)
+- DummyData/ (empty)
+- Pages/ (14 files)
+- Services/ (7 files)
+- UI_Components/ (29 files)
+
+Total Files: 53
+- 3 files in lib root
+- 0 files in DummyData/
+- 14 files in Pages/
+- 7 files in Services/
+- 29 files in UI_Components/
+
+Generated on: July 10, 2025
